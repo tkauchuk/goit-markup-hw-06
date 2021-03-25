@@ -527,7 +527,7 @@ body {
   margin-top: 60px;
   margin-bottom: 60px;
 }
-.right-part-wrapper {
+.middle-part-wrapper {
   height: 80px;
   min-width: 206px;
   margin-left: 70px;
@@ -598,6 +598,73 @@ body {
 .footer-tel-link:focus {
   color: var(--accent-color);
 }
+.right-part-wrapper {
+  margin-left: 93px;
+}
+.form {
+  display: flex;
+  align-items: center;
+}
+.subscribe {
+  display: block;
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--extra-font-color);
+}
+.form-input {
+  margin-right: 12px;
+
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-input:not(:placeholder-shown),
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  color: var(--extra-font-color);
+}
+.subscribe-btn {
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  padding: 10px 28px;
+
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.subscribe-btn-text {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--extra-font-color);
+}
+.subscribe-icon {
+  margin-left: 10px;
+  fill: #ffffff;
+}
 .backdrop {
   position: fixed;
   left: 0;
@@ -618,6 +685,7 @@ body {
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
+  padding: 40px;
   background-color: #ffffff;
   border-radius: 4px;
 }
@@ -638,4 +706,127 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.modal-call {
+  display: block;
+  margin-bottom: 12px;
+
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-font-color);
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-form-field {
+  margin-bottom: 10px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--secondary-font-color);
+}
+.modal-form-input-wrapper {
+  position: relative;
+  display: block;
+  margin-top: 4px;
+}
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+.modal-form-input:focus + .modal-form-icon {
+  fill: var(--accent-color);
+}
+.modal-form-comment {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-top: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-comment:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+.modal-form-comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-check-desc {
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-font-color);
+}
+.modal-form-check-desc::before {
+  display: block;
+  content: '';
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  background-image: url(../images/checkbox.svg);
+  background-color: #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.user-term-agreement:checked + .modal-form-check-desc::before {
+  background: #2196f3;
+  background-image: url(../images/icon-checked.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 2px;
+}
+.user-term-agreement:focus + .modal-form-check-desc::before {
+  box-shadow: 0 0 0 2px greenyellow;
+}
+.term-link {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+.modal-form-btn {
+  min-width: 200px;
+  padding: 10px 55px;
+  align-self: center;
+  margin-top: 30px;
+
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--extra-font-color);
 }
